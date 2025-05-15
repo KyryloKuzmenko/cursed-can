@@ -12,6 +12,13 @@ html {
 
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  font-size: 20px;
 }
 
 h1,
@@ -37,11 +44,31 @@ a {
 }
 
 button {
+  background: transparent;
+  border: none;
+  padding: 0;
   cursor: pointer;
+  display: block;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+  @include media(desktop) {
+    max-width: 1440px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
 }

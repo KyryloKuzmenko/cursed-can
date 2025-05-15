@@ -7,6 +7,7 @@ import { globalStylesOptions } from './global.styles';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },

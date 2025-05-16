@@ -71,3 +71,10 @@ img {
   }
 
 }
+
+.container-2 {
+  @include media(desktop) {
+    max-width: 1440px;
+    padding-left: 100px
+  }
+}

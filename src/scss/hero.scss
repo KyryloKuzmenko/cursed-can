@@ -1,0 +1,65 @@
+.hero-section {
+  background-image: url('../img/mobile/hero-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  @include media(desktop) {
+    background-image: url('../img/desktop/hero-desktop.png');
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.hero-wrap {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 215px;
+  @include media(desktop) {
+    margin-bottom: 120px;
+  }
+}
+
+.hero-logo {
+  width: 177px;
+  height: 206px;
+  margin-top: 20px;
+  @include media(desktop) {
+    width: 237px;
+    height: 277px;
+    margin-top: 40px;
+  }
+}
+
+.hero-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fbd64e;
+  margin-top: 22px;
+  @include media(desktop) {
+    font-size: 28px;
+    margin-top: 22px;
+  }
+}
+
+.hero-text {
+  margin-top: 13px;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  @include media(desktop) {
+    font-size: 22px;
+    width: 603px;
+  }
+}
+
+.hero-btn {
+  width: 224px;
+  height: 80px;
+  margin-top: 28px;
+}

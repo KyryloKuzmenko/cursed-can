@@ -7,6 +7,13 @@
   left: 0;
   right: 0;
   top: 0;
+
+  @include media(desktop) {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .header-wrap {
@@ -28,10 +35,25 @@
   position: absolute;
   top: 16px;
   right: 0;
+
+  @include media(desktop) {
+    display: none;
+  }
 }
 
 .header-menu-hidden-list {
   display: none;
+  @include media(desktop) {
+    display: flex;
+    gap: 44px;
+
+  }
+}
+
+.hidden-menu-link {
+  font-weight: 600;
+font-size: 16px;
+color: #fff;
 }
 
 .backdrop-list {

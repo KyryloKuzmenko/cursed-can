@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     backdrop.classList.toggle('show', show);
     menuOpenBtn.style.display = show ? 'none' : 'block';
     closeMenuBtn.style.display = show ? 'block' : 'none';
-    document.body.style.overflow = show ? 'hidden' : 'auto';
+    // document.body.style.overflow = show ? 'hidden' : 'auto';
   }
 
   menuOpenBtn?.addEventListener('click', () => toggleMenu(true));

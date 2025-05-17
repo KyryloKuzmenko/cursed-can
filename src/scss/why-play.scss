@@ -1,0 +1,48 @@
+.why-play-section {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../img/mobile/why-play-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media(desktop) {
+    background-image: url('../img/desktop/why-play-bg.png');
+  }
+}
+
+.why-play-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-bottom: 444px;
+  @include media(desktop) {
+    margin-bottom: 72px;
+  }
+}
+
+.why-to-play-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #192500;
+  @include media(desktop) {
+    font-size: 32px;
+  }
+}
+
+.why-play-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.why-play-list li:nth-child(2),
+.why-play-list li:nth-child(6) {
+  padding-left: 10px;
+}
+
+.why-play-list-text {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}

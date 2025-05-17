@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   gap: 22px;
+  margin-top: 22px;
   @include media(desktop) {
     margin-right: 60px;
   }
@@ -57,7 +58,7 @@
   width: 100%;
 }
 
-.swiper-wrapper {
+.features-swiper-wrapper  {
   margin-top: 22px;
   display: flex;
   max-height: 386px;
@@ -65,7 +66,7 @@
   align-items: flex-start;
 }
 
-.features-slider .swiper-slide {
+.features-slider .features-swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -84,7 +85,7 @@
 }
 
 .features-slider .swiper-slide:last-child {
-  margin-right: 40px;  
+  margin-right: 40px;
 }
 
 .slide-img {

@@ -1,0 +1,76 @@
+.gameplay-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.gameplay-wrap {
+  margin-top: 54px;
+  margin-bottom: 48px;
+}
+
+.gameplay-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #192500;
+  @include media(desktop) {
+    font-size: 32px;
+  }
+}
+
+.gameplay-nav {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+
+.gameplay-slider {
+  position: relative;
+  left: -20px;
+  width: calc(100% + 40px);
+  padding: 0 10px;
+  overflow: hidden;
+
+  @include media(desktop) {
+    left: 0;
+    width: auto;
+  }
+}
+.gameplay-swiper-slide {
+  flex: 0 0 315px;
+
+  @include media(desktop) {
+    flex: 0 0 720px;
+  }
+}
+
+.desktop-gameplay-slide-img {
+  display: none;
+  @include media(desktop) {
+    display: block;
+    border: 8px solid #fff;
+    border-radius: 22px;
+    box-shadow: 0 0 20px 0 #1e2d00;
+  }
+}
+
+.gameplay-slide-img {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 188px;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 0 #1e2d00;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.gameplay-swiper-wrapper {
+  margin-top: 18px;
+  padding-bottom: 30px;
+}

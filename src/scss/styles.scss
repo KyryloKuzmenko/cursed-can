@@ -13,3 +13,18 @@
 @import './privacy-policy.scss';
 @import './cookies-policy.scss';
 
+
+.game-play-guid-wrap {
+  background-image: url('../img/sections-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 375px;
+  margin: 0 auto;
+  @include media(desktop) {
+    background-image: url('../img/desktop/gameplay-bg.png');
+    width: 100%;
+    max-width: 1440px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

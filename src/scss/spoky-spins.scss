@@ -17,7 +17,9 @@
 }
 
 .spoky-header-text-wrap {
-  margin-left: 100px;
+  @include media(desktop) {
+    margin-left: 100px;
+  }
 }
 
 .spoky-spins-title {

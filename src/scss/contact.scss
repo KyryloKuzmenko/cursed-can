@@ -1,0 +1,57 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-bottom: 98px;
+  gap: 28px;
+}
+
+.contact-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.contact-text {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-info {
+  box-shadow: 0 2px 12px 0 rgba(30, 45, 0, 0.35), inset 0 0 22px 0 #654795;
+  background: #8a61ca;
+
+  border-radius: 12px;
+  padding: 20px 16px;
+  width: 335px;
+  height: 180px;
+}
+
+.email {
+  font-weight: 400;
+}
+
+.k-letter {
+  width: 133px;
+  height: 130px;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+
+.j-letter {
+  width: 192px;
+  height: 189px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

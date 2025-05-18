@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: clip;
+  @include media(desktop) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .contact-wrap {
@@ -10,6 +15,10 @@
   margin-top: 48px;
   margin-bottom: 98px;
   gap: 28px;
+  @include media(desktop) {
+    margin-bottom: 64px;
+    align-items: center;
+  }
 }
 
 .contact-title {
@@ -17,6 +26,9 @@
   text-align: center;
   color: #fff;
   margin-bottom: 4px;
+  @include media(desktop) {
+    font-size: 32px;
+  }
 }
 
 .contact-text {
@@ -34,9 +46,25 @@
   padding: 20px 16px;
   width: 335px;
   height: 180px;
+  @include media(desktop) {
+    width: 463px;
+    height: 132px;
+  }
+}
+
+.contact-text-info {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  padding: 0;
 }
 
 .email {
+  font-weight: 400;
+}
+
+.hours {
   font-weight: 400;
 }
 
@@ -46,12 +74,25 @@
   position: absolute;
   bottom: 15px;
   left: 0;
+  
+  @include media(desktop) {
+    left: 185px;
+    width: 175px;
+    height: 172px;
+    bottom: 60px;
+  }
 }
 
 .j-letter {
-  width: 192px;
-  height: 189px;
+  width: 222px;
+  height: 200px;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -25px;
+  right: -60px;
+  @include media(desktop) {
+    right: 70px;
+    bottom: 15px;
+    width: 235px;
+    height: 220px;
+  }
 }

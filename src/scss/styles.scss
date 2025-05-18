@@ -36,4 +36,8 @@
   background-repeat: no-repeat;
   max-width: 375px;
   margin: 0 auto;
+  @include media(desktop) {
+    background-image: url('../img/desktop/play-now-contact-bg-desktop.png');
+    max-width: 1440px;
+  }
 }

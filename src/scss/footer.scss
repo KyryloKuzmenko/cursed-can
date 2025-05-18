@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   background: #654795;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .footer-disclaimer {
@@ -11,6 +13,14 @@
   background: #8a61ca;
   width: 375px;
   padding: 40px 20px;
+  @include media(desktop) {
+    width: 1440px;
+    padding: 83px 100px;
+  }
+}
+
+.disclaimer-word {
+  font-weight: 800;
 }
 
 .footer-text {
@@ -20,18 +30,34 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  @include media(desktop) {
+    font-size: 22px;
+  }
 }
 
 .footer-legal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media(desktop) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .footer-logo {
   width: 81px;
   height: 70px;
   margin-top: 5px;
+  @include media(desktop) {
+    order: 2;
+    width: 140px;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 252px;
+  }
 }
 
 .rights {
@@ -39,15 +65,29 @@
   font-size: 14px;
   color: #fff;
   margin-top: 14px;
+  @include media(desktop) {
+    order: 1;
+  }
+}
+
+.footer-nav {
+  @include media(desktop) {
+    order: 3;
+  }
 }
 
 .footer-pages-list {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   gap: 12px;
   margin-top: 22px;
   margin-bottom: 22px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 32px;
+    margin-left: 111px;
+  }
 }
 
 .footer-pages-link {

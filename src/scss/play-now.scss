@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: clip;
 }
 
 .play-now-wrap {
@@ -10,12 +11,18 @@
   margin-top: 48px;
   margin-bottom: 74px;
   z-index: 2;
+  @include media(desktop) {
+    margin-bottom: 40px;
+  }
 }
 
 .play-now-title {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  @include media(desktop) {
+    font-size: 32px;
+  }
 }
 
 .play-now-text {
@@ -37,19 +44,31 @@
 }
 
 .a-letter {
-  width: 122px;
-  height: 122px;
+  width: 164px;
+  height: 164px;
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   left: 0;
-  z-index: 1;
+  transform: translateX(-37px);
+  @include media(desktop) {
+    left: 96px;
+    bottom: 20px;
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .q-letter {
-  width: 134px;
-  height: 134px;
+  width: 184px;
+  height: 184px;
   position: absolute;
-  bottom: 0;
+  bottom: -50px;            
   right: 0;
-  z-index: 1;
+  transform: translateX(43px);
+  @include media(desktop) {
+    right: 180px;
+    bottom: 5px;
+    width: 220px;
+    height: 220px;
+  }
 }

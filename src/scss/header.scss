@@ -1,3 +1,5 @@
+
+
 .header-section {
   height: 60px;
   box-shadow: 0 2px 12px 0 rgba(30, 45, 0, 0.35), inset 0 0 22px 0 #654795;
@@ -46,14 +48,13 @@
   @include media(desktop) {
     display: flex;
     gap: 44px;
-
   }
 }
 
 .hidden-menu-link {
   font-weight: 600;
-font-size: 16px;
-color: #fff;
+  font-size: 16px;
+  color: #fff;
 }
 
 .backdrop-list {
@@ -95,3 +96,5 @@ color: #fff;
 .active {
   color: #fff200;
 }
+
+

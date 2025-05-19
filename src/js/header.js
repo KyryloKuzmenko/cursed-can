@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenuBtn = document.querySelector('.close-menu-btn');
   const backdrop = document.querySelector('.backdrop');
   const menuLinks = document.querySelectorAll(
-    '.backdrop-link, hidden-menu-link'
+    '.backdrop-link, .hidden-menu-link'
   );
 
   function toggleMenu(show) {
@@ -21,15 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   menuLinks.forEach(link => {
     link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetEl = document.querySelector(targetId);
+      const href = link.getAttribute('href');
 
-      if (targetEl) {
-        const yOffset = -60;
-        const y =
-          targetEl.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+      // если это якорь (начинается с #)
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const targetEl = document.querySelector(href);
+        if (targetEl) {
+          const yOffset = -60;
+          const y =
+            targetEl.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          toggleMenu(false);
+        }
+      } else {
+        // внешняя страница — просто закрываем меню
         toggleMenu(false);
       }
     });
@@ -37,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function highlightMenu() {
     const sections = document.querySelectorAll('section[id], article[id]');
-    const scrollY = window.scrollY + 66;
+    const scrollY = window.scrollY + 120;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -59,4 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', highlightMenu);
   highlightMenu();
+
+  const currentPath = window.location.pathname.split('/').pop();
+
+  document.querySelectorAll('.backdrop-link').forEach(link => {
+    const href = link.getAttribute('href');
+
+    if (href === `./${currentPath}` || href === currentPath) {
+      link.classList.add('active');
+    }
+  });
 });

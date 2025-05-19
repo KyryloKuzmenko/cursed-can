@@ -1,8 +1,37 @@
-.privacy-policy-section{
+.privacy-section {
   display: flex;
   flex-direction: column;
+  max-width: 375px;
+  margin: 0 auto;
+  background: #FBD64E;
+  @include media(desktop) {
+    max-width: 1440px;
+  }
+}
+
+
+.privacy-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 337px;
   padding-top: 100px;
-  padding-bottom: 60px;
-  box-shadow: inset 0 4px 44px 12px #deaf00;
-background: #fbd64e;
+  gap: 20px;
+  margin-bottom: 60px;
+  @include media(desktop) {
+    width: 100%;
+    max-width: 1268px;
+    padding-top: 120px;
+  }
+}
+
+
+.privacy-list-item,
+.privacy-list-item-1,
+.privacy-list-item-3 {
+  padding-left: 10px;
+  display: flex;
+}
+
+.privacy-link {
+  text-decoration: underline;
 }

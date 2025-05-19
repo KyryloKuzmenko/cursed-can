@@ -1,0 +1,123 @@
+
+
+.cookies-wrap {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  box-shadow: 0 14px 42px 0 rgba(8, 15, 52, 0.06);
+  background: #8a61ca;
+  border-radius: 20px;
+  width: 335px;
+  height: 278px;
+
+  z-index: 9999;
+  padding-bottom: 30px;
+
+  @include media(desktop) {
+    margin-bottom: 80px;
+    width: 1272px;
+    height: 164px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+  }
+}
+
+.close-cookie {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  width: 14px;
+  height: 14px;
+  @include media(desktop) {
+    position: static;
+  }
+}
+
+.cookkie-text-wrap {
+  margin-top: 40px;
+  @include media(desktop) {
+    margin: 0;
+    width: 648px;
+  }
+}
+
+.cookies-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #fff;
+  padding-left: 17px;
+  @include media(desktop) {
+    font-size: 18px;
+    line-height: 1.66667;
+  }
+}
+
+.cookies-btn-wrap {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+  @include media(desktop) {
+    margin-top: 0;
+  }
+}
+
+.cookie-btn {
+  border: 1px solid #fff;
+  border-radius: 56px;
+  padding: 18px 26px;
+  width: 111px;
+  height: 54px;
+  box-shadow: 0 4px 8px 0 rgba(74, 58, 255, 0.08);
+  background: #8a61ca;
+  font-size: 16px;
+  line-height: 1.125;
+  color: #fff;
+
+  @include media(desktop) {
+    // width: 519px;
+    // height: 56px;
+    // font-size: 28px;
+  }
+}
+
+.cookies-accept {
+  border-radius: 56px;
+  padding: 18px 26px;
+  width: 178px;
+  height: 54px;
+  box-shadow: 0 3px 12px 0 rgba(74, 58, 255, 0.18);
+  @include media(desktop) {
+    order: 1;
+  }
+}
+
+.cookies-decline {
+  @include media(desktop) {
+    order: 2;
+  }
+}
+
+.cookies-decline:hover {
+  background: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  color: #8a61ca;
+}
+
+.cookies-accept:hover {
+  background: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  color: #8a61ca;
+}

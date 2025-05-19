@@ -57,6 +57,10 @@
   color: #fff;
 }
 
+.hidden-menu-link:hover {
+  color: #fff200;
+}
+
 .backdrop-list {
   display: flex;
   flex-direction: column;
@@ -86,6 +90,10 @@
   font-weight: 600;
   font-size: 16px;
   color: #fff;
+}
+
+.backdrop-link:hover {
+  color: #fff200;
 }
 
 .backdrop.show {

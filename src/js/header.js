@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     backdrop.classList.toggle('show', show);
     menuOpenBtn.style.display = show ? 'none' : 'block';
     closeMenuBtn.style.display = show ? 'block' : 'none';
-    // document.body.style.overflow = show ? 'hidden' : 'auto';
+
   }
 
   menuOpenBtn?.addEventListener('click', () => toggleMenu(true));
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
 
-      // если это якорь (начинается с #)
+
       if (href.startsWith('#')) {
         e.preventDefault();
         const targetEl = document.querySelector(href);
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           toggleMenu(false);
         }
       } else {
-        // внешняя страница — просто закрываем меню
+
         toggleMenu(false);
       }
     });
@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
           .querySelectorAll('.backdrop-link, .hidden-menu-link')
           .forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
+            const linkHash = new URL(link.href).hash;
+            if (linkHash === `#${sectionId}`) {
               link.classList.add('active');
             }
           });
